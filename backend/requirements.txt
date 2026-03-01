@@ -1,0 +1,7 @@
+google-genai
+python-dotenv
+Pillow
+psycopg2-binary
+fastapi
+uvicorn
+python-multipart
