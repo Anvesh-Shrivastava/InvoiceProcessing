@@ -92,3 +92,20 @@ Key variables needed:
 
 - `/frontend`: Next.js application containing the UI, routing, and client-side logic.
 - `/backend`: FastAPI application containing the agentic workflow, AI integration, and file processing endpoints.
+
+
+
+## Constraints Limitations and Lessons Learned
+
+This application is a proof of concept and is not intended for production use. It is a simple example of how to use AI models to extract information from invoices.
+
+Constraints:
+- Use only Free Tier Services for DB, AI, and Storage
+- Build within 3 hours of starting the project
+- Use only the tokens available in the free tier for the chosen AI model
+
+Lessons Learned:
+- The very first attempt, to preserve the computational resources, i metaprompted. I discussed and planned with Gemini in detail about what th eproject needs , which tech stack to use, how the app should behave, the entire workflow.
+- What i Observed with the conversation that the initial output of the conversation was much better than what the model concluded at the end, even after multiple reminders that initial output was more detailed. My assumption is two things, first is that because of repeated to and fro with the model it lost the context or it got influenced too much with my prompts. Second is that it forgot the initial conversation, maybe it summarised the long text and then could not find the original text.
+- The meta prompt worked, it created the app across the entire stack, but it didnt run. It had auth , db, storage, frontend and backend. Debugging it exhausted the free tier tokens.
+- The second attempt, I built theh app from small features, testing them and then moving to additional features. This time the app ran successfully. Iterations were reqruied and the Tool ( antigravity) went into UI validation loops and just took a lot of time and iterations. I stopped it a couple of time, nudged it in corrrect direction. 
